@@ -3,6 +3,7 @@
 #if __has_include("MainPage.g.cpp")
 #include "MainPage.g.cpp"
 #endif
+#include <SettingWindow.xaml.h>
 
 using namespace winrt;
 using namespace Microsoft::UI;
@@ -110,6 +111,25 @@ namespace winrt::Luck_WinUI3::implementation
 	}
 	void MainPage::SettingsButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
 	{
+		Window _SettingWindow{ nullptr };
+		_SettingWindow = winrt::make<winrt::Luck_WinUI3::implementation::SettingWindow>();
+		
+		try
+		{
+			winrt::Microsoft::UI::Xaml::Controls::Frame rootFrame = Microsoft::UI::Xaml::Controls::Frame();
+			_SettingWindow.Content(rootFrame);
+			rootFrame.Navigate(winrt::xaml_typename<SettingPage>(), _SettingWindow);
+		}
+		catch (winrt::hresult_error const& ex)
+		{
+			winrt::hresult hr = ex.code();
+			winrt::hstring message = ex.message();
 
+			__debugbreak();
+			MessageBox(NULL, L"严重错误,设置页面无法加载。\n", LUCK_ERROE_TITLE, MB_OK);
+			throw ex;
+		}
+
+		_SettingWindow.Activate();
 	}
 }

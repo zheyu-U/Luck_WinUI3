@@ -6,6 +6,8 @@
   <ItemGroup>
     <Page Include="MainWindow.xaml" />
     <Page Include="MainPage.xaml" />
+    <Page Include="SettingWindow.xaml" />
+    <Page Include="SettingPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />
@@ -17,10 +19,16 @@
     <ClCompile Include="Assets\Classes\Luck-Class\Luck.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="Assets\Classes\RippleHelper\RippleHelper.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Assets\Classes\Luck-Class\Luck.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Classes\RippleHelper\RippleHelper.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
@@ -69,10 +77,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="README-devloping.md" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Assets\Fonts\HarmonyOS_Sans_SC_Medium.ttf">
       <Filter>Assets\Fonts</Filter>
     </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>
