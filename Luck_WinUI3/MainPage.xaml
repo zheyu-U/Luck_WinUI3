@@ -82,8 +82,8 @@
             Label="重置" />
         <Button
             x:Name="SettingsButton"
-            Margin="110,805,0,0"
-            VerticalAlignment="Top"
+            Margin="110,0,0,50"
+            VerticalAlignment="Bottom"
             Click="SettingsButton_Click"
             Content="设置" />
     </Grid>

@@ -24,6 +24,6 @@ namespace winrt::Luck_WinUI3::implementation
 
     void SettingPage::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
-        myButton().Content(box_value(L"Setting Page Loaded!!!"));
+        //myButton().Content(box_value(L"Setting Page Loaded!!!"));
     }
 }
