@@ -1,9 +1,0 @@
-namespace Luck_WinUI3
-{
-    [default_interface]
-    runtimeclass SettingWindow : Microsoft.UI.Xaml.Window
-    {
-        SettingWindow();
-        Int32 MyProperty;
-    }
-}

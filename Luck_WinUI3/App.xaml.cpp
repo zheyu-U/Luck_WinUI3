@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "App.xaml.h"
 #include "MainWindow.xaml.h"
 
@@ -10,6 +10,8 @@ using namespace Microsoft::UI::Xaml;
 
 namespace winrt::Luck_WinUI3::implementation
 {
+    bool App::isFirstNavigateToMainPage = true;
+    winrt::Microsoft::UI::Windowing::AppWindow  App::appWindow{nullptr};
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -37,15 +39,29 @@ namespace winrt::Luck_WinUI3::implementation
     /// <param name="e">Details about the launch request and process.</param>
     void App::OnLaunched([[maybe_unused]] LaunchActivatedEventArgs const& e)
     {
+        using namespace Microsoft::UI::Windowing;
         window = make<MainWindow>();
         window.ExtendsContentIntoTitleBar(true);//将内容延伸到标题栏区域
+        try
+        {
+            App::appWindow = window.AppWindow();
+            App::appWindow.SetPresenter(AppWindowPresenterKind::FullScreen);
+        }
+        catch (winrt::hresult_error const& ex)
+        {
+            winrt::hresult hr = ex.code();
+            winrt::hstring message = ex.message();
 
+            __debugbreak();
+            MessageBox(NULL, L"严重错误，窗口处理失败。\n", LUCK_ERROE_TITLE, MB_OK);
+            abort();
+        }
         // 导航到 MainPage
         try
         {
-            winrt::Microsoft::UI::Xaml::Controls::Frame rootFrame = Microsoft::UI::Xaml::Controls::Frame();
+            winrt::Microsoft::UI::Xaml::Controls::Frame rootFrame;
             window.Content(rootFrame);
-            rootFrame.Navigate(xaml_typename<MainPage>(), window);
+            rootFrame.Navigate(xaml_typename<MainPage>(), appWindow);
         }
         catch (winrt::hresult_error const& ex)
         {
@@ -86,8 +102,6 @@ namespace winrt::Luck_WinUI3::implementation
             localSettings.Values().Insert(L"SecondPrizeProbability", box_value(30));
             localSettings.Values().Insert(L"ThirdPrizeProbability", box_value(60));
         }
-
-
         window.Activate();
     }
 }

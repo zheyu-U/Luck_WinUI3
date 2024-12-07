@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "SettingPage.xaml.h"
 #if __has_include("SettingPage.g.cpp")
 #include "SettingPage.g.cpp"
@@ -22,8 +22,8 @@ namespace winrt::Luck_WinUI3::implementation
         throw hresult_not_implemented();
     }
 
-    void SettingPage::myButton_Click(IInspectable const&, RoutedEventArgs const&)
+    void SettingPage::BackButton_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
     {
-        //myButton().Content(box_value(L"Setting Page Loaded!!!"));
+        Frame().Navigate(winrt::xaml_typename<MainPage>());
     }
 }

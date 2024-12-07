@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "Luck.h"
 #include <random>
 std::vector<int> LuckSet::LuckyNumbers;

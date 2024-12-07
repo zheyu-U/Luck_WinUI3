@@ -6,7 +6,6 @@
   <ItemGroup>
     <Page Include="MainWindow.xaml" />
     <Page Include="MainPage.xaml" />
-    <Page Include="SettingWindow.xaml" />
     <Page Include="SettingPage.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -83,8 +82,5 @@
     <Font Include="Assets\Fonts\HarmonyOS_Sans_SC_Medium.ttf">
       <Filter>Assets\Fonts</Filter>
     </Font>
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

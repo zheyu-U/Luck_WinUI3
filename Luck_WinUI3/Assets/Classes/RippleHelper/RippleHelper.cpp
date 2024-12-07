@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "RippleHelper.h"
 #include "winrt/Windows.UI.Composition.h"
 

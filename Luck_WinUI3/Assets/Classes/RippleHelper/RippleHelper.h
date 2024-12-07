@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "winrt/Windows.UI.Composition.h"
 using namespace winrt::Microsoft::UI::Xaml;
 using namespace winrt::Microsoft::UI::Xaml::Input;

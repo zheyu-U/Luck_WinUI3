@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "MainPage.g.h"
 
@@ -14,8 +14,6 @@ namespace winrt::Luck_WinUI3::implementation
 
         int32_t MyProperty();
         void MyProperty(int32_t value);
-        void  OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e);
-
 
         void myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
         void Button_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
@@ -26,6 +24,7 @@ namespace winrt::Luck_WinUI3::implementation
     
     private:
         winrt::Microsoft::UI::Windowing::AppWindow this_AppWindow = winrt::Microsoft::UI::Windowing::AppWindow(nullptr);
+
     };
 }
 

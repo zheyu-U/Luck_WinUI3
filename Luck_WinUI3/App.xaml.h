@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "App.xaml.g.h"
 
@@ -12,5 +12,8 @@ namespace winrt::Luck_WinUI3::implementation
 
     private:
         winrt::Microsoft::UI::Xaml::Window window{ nullptr };
+    public:
+        static bool isFirstNavigateToMainPage;
+        static  winrt::Microsoft::UI::Windowing::AppWindow appWindow;
     };
 }

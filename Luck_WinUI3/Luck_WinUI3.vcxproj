@@ -123,19 +123,12 @@
       <DependentUpon>SettingPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
-    <ClInclude Include="SettingWindow.xaml.h">
-      <DependentUpon>SettingWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
     <Page Include="MainPage.xaml" />
     <Page Include="MainWindow.xaml" />
     <Page Include="SettingPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SettingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -159,10 +152,6 @@
       <DependentUpon>SettingPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
-    <ClCompile Include="SettingWindow.xaml.cpp">
-      <DependentUpon>SettingWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainPage.idl" />
@@ -172,10 +161,6 @@
     </Midl>
     <Midl Include="SettingPage.idl">
       <DependentUpon>SettingPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Midl>
-    <Midl Include="SettingWindow.idl">
-      <DependentUpon>SettingWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Midl>
   </ItemGroup>

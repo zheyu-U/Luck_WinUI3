@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "SettingPage.g.h"
 
@@ -14,8 +14,7 @@ namespace winrt::Luck_WinUI3::implementation
 
         int32_t MyProperty();
         void MyProperty(int32_t value);
-
-        void myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void BackButton_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
     };
 }
 

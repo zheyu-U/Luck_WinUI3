@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Page
     x:Class="Luck_WinUI3.SettingPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -46,6 +46,12 @@
             Height="60"
             VerticalAlignment="Top"
             Background="{ThemeResource SystemAccentColor}">
+            <Button x:Name="BackButton" Click="BackButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Symbol="Back" />
+                    <TextBlock Text="返回" />
+                </StackPanel>
+            </Button>
             <TextBlock
                 Margin="30,0,0,0"
                 VerticalAlignment="Center"
