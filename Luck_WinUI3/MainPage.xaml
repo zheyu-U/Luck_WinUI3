@@ -71,12 +71,12 @@
             Icon="Clear"
             Label="退出" />
         <AppBarButton
-            x:Name="RenewButton"
+            x:Name="ToggleScreenModeButton"
             Width="100"
             Height="60"
             Margin="291,679,0,0"
             Background="#FF02F0DF"
-            Click="RenewButton_Click"
+            Click="ToggleScreenModeButton_Click"
             FontFamily="{StaticResource HarmonyOSSans}"
             Icon="Refresh"
             Label="重置" />

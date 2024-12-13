@@ -8,10 +8,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Orientation="Horizontal">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <Frame x:Name="rootFrame" />
+        <Border
+            Height="80"
+            Width="400"
+            HorizontalAlignment="Center"
+            CornerRadius="4,4,4,4"
+            VerticalAlignment="Top"
+            BorderThickness="2"
+            BorderBrush="Green" >
+            <Grid Background="LightBlue">
+                <TextBlock Text="Luck" FontFamily="{StaticResource HarmonyOSSans}" FontSize="20"/>
+            </Grid>
+            </Border>
+    </Grid>
+
 </Window>

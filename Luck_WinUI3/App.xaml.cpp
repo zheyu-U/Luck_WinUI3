@@ -56,22 +56,22 @@ namespace winrt::Luck_WinUI3::implementation
             MessageBox(NULL, L"严重错误，窗口处理失败。\n", LUCK_ERROE_TITLE, MB_OK);
             abort();
         }
-        // 导航到 MainPage
-        try
-        {
-            winrt::Microsoft::UI::Xaml::Controls::Frame rootFrame;
-            window.Content(rootFrame);
-            rootFrame.Navigate(xaml_typename<MainPage>(), appWindow);
-        }
-        catch (winrt::hresult_error const& ex)
-        {
-            winrt::hresult hr = ex.code();
-            winrt::hstring message = ex.message();
+        //// 导航到 MainPage
+        //try
+        //{
+        //    //winrt::Microsoft::UI::Xaml::Controls::Frame rootFrame;
+        //    //window.Content(rootFrame);
+        //    //rootFrame.Navigate(xaml_typename<MainPage>(), appWindow);
+        //}
+        //catch (winrt::hresult_error const& ex)
+        //{
+        //    winrt::hresult hr = ex.code();
+        //    winrt::hstring message = ex.message();
 
-            __debugbreak();
-            MessageBox(NULL, L"严重错误,抽奖程序无法启动。\n", LUCK_ERROE_TITLE, MB_OK);
-            throw ex;
-        }
+        //    __debugbreak();
+        //    MessageBox(NULL, L"严重错误,抽奖程序无法启动。\n", LUCK_ERROE_TITLE, MB_OK);
+        //    throw ex;
+        //}
        
         // 加载奖项数据
         Windows::Storage::ApplicationDataContainer localSettings = Windows::Storage::ApplicationData::Current().LocalSettings();
