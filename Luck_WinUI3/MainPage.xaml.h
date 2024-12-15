@@ -18,7 +18,6 @@ namespace winrt::Luck_WinUI3::implementation
         void myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
         void Button_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
         void ExitButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
-        void ToggleScreenModeButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
         void SettingsButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
     
     

@@ -11,17 +11,42 @@
     <Grid>
         <Frame x:Name="rootFrame" />
         <Border
-            Height="80"
             Width="400"
+            Height="80"
             HorizontalAlignment="Center"
-            CornerRadius="4,4,4,4"
             VerticalAlignment="Top"
+            BorderBrush="Green"
             BorderThickness="2"
-            BorderBrush="Green" >
-            <Grid Background="LightBlue">
-                <TextBlock Text="Luck" FontFamily="{StaticResource HarmonyOSSans}" FontSize="20"/>
+            CornerRadius="4,4,4,4">
+            <Grid>
+                <Grid.Background>
+                    <AcrylicBrush TintColor="Transparent" TintOpacity="0" />
+                </Grid.Background>
+                <TextBlock
+                    FontFamily="{StaticResource HarmonyOSSans}"
+                    FontSize="20"
+                    Text="Luck" />
             </Grid>
-            </Border>
+        </Border>
+        <Button
+            x:Name="ToggleScreenModeButton"
+            Width="120"
+            Height="40"
+            Margin="0,0,50,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Background="#FF02F0DF"
+            Click="ToggleScreenModeButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon x:Name="ToggleScreenModeButtonSymbolIcon" Symbol="NewWindow" />
+                <TextBlock
+                    Margin="5,0,0,0"
+                    x:Name="ToggleScreenModeButtonTextBlock"
+                    FontFamily="{StaticResource HarmonyOSSans}"
+                    FontSize="15"
+                    Text="退出全屏" />
+            </StackPanel>
+        </Button>
     </Grid>
 
 </Window>
